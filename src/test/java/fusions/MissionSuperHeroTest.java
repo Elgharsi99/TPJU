@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MissionSuperHeroTest {
+public class MissionSuperHeroTest { //gère la mission de protection et de récupération d’une œuvre d’art par un super-héros.
     private MissionSuperHero mission;
     private SuperHero batman;
     private ToileDePeintureCelebre monaLisa;
@@ -21,18 +21,18 @@ public class MissionSuperHeroTest {
     }
 
     @Test
-    void testMissionNonAccomplieInitialement() {
+    void testMissionNonAccomplieInitialement() { //Vérifie qu’une mission n’est pas accomplie à la création.
         assertFalse(mission.isMissionReussie(), "La mission ne devrait pas être accomplie au départ.");
     }
 
     @Test
-    void testAccomplirMission() {
+    void testAccomplirMission() { //Vérifie que la mission est bien marquée comme réussie après son exécution.
         mission.accomplirMission();
         assertTrue(mission.isMissionReussie(), "La mission devrait être marquée comme réussie après accomplissement.");
     }
 
     @Test
-    void testAfficherInfos() {
+    void testAfficherInfos() {//Vérifie l'affichage des informations avant et après l’accomplissement.
         String expectedAvant = "📜 Mission : Batman protège La Joconde | Succès : ❌";
         assertEquals(expectedAvant, mission.afficherInfos(), "Le détail de la mission doit correspondre avant accomplissement.");
 
